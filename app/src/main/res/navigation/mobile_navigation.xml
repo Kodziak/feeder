@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.example.feeder.ui.login.LoginFragment"
+        android:name="com.example.feeder.ui.login.RegisterFragment"
         android:label="@string/title_login"
         tools:layout="@layout/fragment_login" />
 

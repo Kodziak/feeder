@@ -1,4 +1,4 @@
-package com.example.feeder.ui.login
+package com.example.feeder.ui.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.feeder.R
 
-class LoginFragment : Fragment() {
+class RegisterFragment : Fragment() {
 
-    private lateinit var loginViewModel: RegisterViewModel
+    private lateinit var registerViewModel: RegisterViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        loginViewModel =
+        registerViewModel =
                 ViewModelProvider(this).get(RegisterViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_login, container, false)
+        val root = inflater.inflate(R.layout.fragment_register, container, false)
         val textView: TextView = root.findViewById(R.id.text_login)
-        loginViewModel.text.observe(viewLifecycleOwner, Observer {
+        registerViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
