@@ -6,8 +6,4 @@ import androidx.lifecycle.ViewModel
 
 class RegisterViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "Register"
-    }
-    val text: LiveData<String> = _text
 }

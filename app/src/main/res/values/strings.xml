@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Feeder</string>
+    <string name="app_description">One place to follow</string>
 
     <string name="title_login">Login</string>
     <string name="title_register">Register</string>
@@ -12,7 +13,29 @@
 
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="login">Login</string>
+    <string name="email">E-mail</string>
     <string name="submit">Submit</string>
     <string name="register">Register</string>
+    <string name="back">Back</string>
+
+    <string name="name">Name</string>
+    <string name="url">Url</string>
+
+    <string name="email_error">Something is wrong with e-mail</string>
+    <string name="password_error">Something is wrong with password</string>
+
+    <string name="whats_new">Whats new</string>
+    <string name="whats_new_body">Nothing</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="pick_language">Pick Language</string>
+    <string name="notifications">Notifications</string>
+    <string name="theme">Theme</string>
+
+    <string name="base_language">English</string>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Polish</item>
+        <item>Chinese</item>
+    </string-array>
 </resources>

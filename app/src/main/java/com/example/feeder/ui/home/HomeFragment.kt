@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.feeder.R
 
 class HomeFragment : Fragment() {
-
     private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
@@ -19,13 +18,11 @@ class HomeFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 }
+
+// Home to list view z najnowszymi postami z listy
+// TODO: Dodać feeds list gdzie będzie list z dodanymi feedami.

@@ -5,64 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="117dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="147dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:srcCompat="@drawable/ic_baseline_rss_feed_24" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/register_login_value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="@dimen/margin_x"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="100dp"
-        android:hint="@string/login"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_register" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:errorEnabled="true"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/register_password_value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="@dimen/margin_x"
+        android:layout_marginEnd="@dimen/margin_x"
         android:layout_marginTop="16dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_login_value" />
+        app:layout_constraintTop_toBottomOf="@+id/register_login_value"
+        app:errorEnabled="true"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/register_password_confirm_value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="@dimen/margin_x"
+        android:layout_marginEnd="@dimen/margin_x"
         android:layout_marginTop="16dp"
         android:hint="@string/confirm_password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_password_value" />
+        app:layout_constraintTop_toBottomOf="@+id/register_password_value"
+        app:errorEnabled="true"/>
 
     <Button
         android:id="@+id/register_submit_btn"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="106dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="@dimen/margin_x"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="105dp"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:onClick="clickSubmit"
         android:ems="10"
         android:text="@string/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_password_confirm_value" />
+
+    <Button
+        android:id="@+id/register_back_btn"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="@dimen/margin_x"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:onClick="clickBack"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_submit_btn"
+        style="?attr/materialButtonOutlinedStyle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

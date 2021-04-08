@@ -19,7 +19,9 @@ class MainActivity : AppCompatActivity() {
 
     protected var SPLASH_SCREEN: Long = 2000;
 
-    protected lateinit var textView: TextView;
+    protected lateinit var imageView: ImageView;
+    protected lateinit var appNameText: TextView;
+    protected lateinit var appDescriptionText: TextView;
     protected lateinit var topAnim: Animation;
     protected lateinit var botAnim: Animation;
 
@@ -36,8 +38,14 @@ class MainActivity : AppCompatActivity() {
         botAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
 
         // Hooks
-        textView = findViewById(R.id.app_title)
-        textView.setAnimation(topAnim)
+        imageView = findViewById(R.id.app_image)
+        imageView.setAnimation(topAnim)
+
+        appNameText = findViewById(R.id.app_title)
+        appNameText.setAnimation(botAnim)
+
+        appDescriptionText = findViewById(R.id.app_description)
+        appDescriptionText.setAnimation(botAnim)
 
         Handler().postDelayed(Runnable {
             run() {

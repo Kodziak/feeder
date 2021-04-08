@@ -6,53 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_add_rss"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/add_rss_name"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="106dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="117dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="147dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_add_rss" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_rss_feed_24" />
 
-    <EditText
-        android:id="@+id/add_rss_url"
-        android:layout_width="200dp"
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/add_rss_name_value"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
+        android:layout_marginStart="@dimen/margin_x"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:hint="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/add_rss_url_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_x"
+        android:layout_marginEnd="@dimen/margin_x"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="106dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="URL"
+        android:hint="@string/url"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_rss_name" />
+        app:layout_constraintTop_toBottomOf="@+id/add_rss_name_value" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="@dimen/margin_x"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="106dp"
-        android:text="Submit"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:text="@string/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_rss_url" />
+        app:layout_constraintTop_toBottomOf="@+id/add_rss_url_value" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

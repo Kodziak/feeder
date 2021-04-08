@@ -19,13 +19,8 @@ class AddRSSFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        addRSSViewModel =
-                ViewModelProvider(this).get(AddRSSViewModel::class.java)
+        addRSSViewModel = ViewModelProvider(this).get(AddRSSViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_add_rss, container, false)
-        val textView: TextView = root.findViewById(R.id.text_add_rss)
-        addRSSViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 }
