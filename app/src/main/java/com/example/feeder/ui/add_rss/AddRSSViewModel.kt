@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class AddRSSViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is ADD RSS Fragment"
+        value = "ADD RSS"
     }
     val text: LiveData<String> = _text
 }

@@ -17,7 +17,7 @@ import androidx.navigation.ui.setupWithNavController
 
 class MainActivity : AppCompatActivity() {
 
-    protected var SPLASH_SCREEN: Long = 4000;
+    protected var SPLASH_SCREEN: Long = 2000;
 
     protected lateinit var textView: TextView;
     protected lateinit var topAnim: Animation;
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.splash_screen)
 
         // Animations
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);

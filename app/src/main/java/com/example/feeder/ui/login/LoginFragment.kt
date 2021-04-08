@@ -12,7 +12,7 @@ import com.example.feeder.R
 
 class LoginFragment : Fragment() {
 
-    private lateinit var loginViewModel: RegisterViewModel
+    private lateinit var loginViewModel: LoginViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -20,7 +20,7 @@ class LoginFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         loginViewModel =
-                ViewModelProvider(this).get(RegisterViewModel::class.java)
+                ViewModelProvider(this).get(LoginViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_login, container, false)
         val textView: TextView = root.findViewById(R.id.text_login)
         loginViewModel.text.observe(viewLifecycleOwner, Observer {
