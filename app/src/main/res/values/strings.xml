@@ -17,6 +17,8 @@
     <string name="submit">Submit</string>
     <string name="register">Register</string>
     <string name="back">Back</string>
+    <string name="login_google">Login by Google</string>
+    <string name="view">View</string>
 
     <string name="name">Name</string>
     <string name="url">Url</string>
@@ -26,6 +28,8 @@
 
     <string name="whats_new">Whats new</string>
     <string name="whats_new_body">Nothing</string>
+    <string name="verf_code">Verification code</string>
+
     <string name="cancel">Cancel</string>
     <string name="ok">Ok</string>
     <string name="pick_language">Pick Language</string>

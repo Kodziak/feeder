@@ -69,6 +69,8 @@
         android:onClick="clickSubmit"
         android:ems="10"
         android:text="@string/submit"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/gold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_password_confirm_value" />

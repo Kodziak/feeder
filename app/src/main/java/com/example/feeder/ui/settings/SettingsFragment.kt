@@ -25,11 +25,6 @@ class SettingsFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_settings, container, false)
 
-        val textView: TextView = root.findViewById(R.id.text_settings)
-        settingsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-
         val languages = resources.getStringArray(R.array.languages);
         val arrayAdapter = ArrayAdapter(requireContext(), R.layout.list_item, languages)
 

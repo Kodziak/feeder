@@ -1,4 +1,4 @@
-package com.example.feeder.ui.register
+package com.example.feeder.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,18 +10,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.feeder.R
 
-class RegisterFragment : Fragment() {
-
-    private lateinit var registerViewModel: RegisterViewModel
-
+class AddRSSFragment : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        registerViewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_register, container, false)
-
+        val root = inflater.inflate(R.layout.fragment_add_rss, container, false)
         return root
     }
 }
