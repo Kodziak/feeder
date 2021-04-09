@@ -4,22 +4,25 @@ import android.app.Dialog
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.feeder.ui.events.EventDetailsFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class DashboardActivity : AppCompatActivity() {
     private val CHANNEL_ID = "1"
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,5 +65,19 @@ class DashboardActivity : AppCompatActivity() {
             val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
+    }
+
+    public fun clickDeleteAccount(view: View) {
+        MaterialAlertDialogBuilder(this)
+            .setTitle(resources.getString(R.string.delete_account))
+            .setMessage(resources.getString(R.string.are_you_sure))
+            .setPositiveButton(resources.getString(R.string.ok)) { dialog, which ->
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish();
+            }
+            .setNegativeButton(resources.getString(R.string.cancel)) {dialog, which ->}
+            .show()
+
     }
 }

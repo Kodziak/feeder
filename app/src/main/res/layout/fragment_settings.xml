@@ -80,5 +80,20 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:id="@+id/delete_account_btn"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="@dimen/margin_x"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:onClick="clickDeleteAccount"
+        android:text="@string/delete_account"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        style="?attr/materialButtonOutlinedStyle" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
